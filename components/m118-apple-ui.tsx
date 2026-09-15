@@ -14,7 +14,7 @@ export default function M118AppleUI(){
   document.body.classList.toggle("m118-sidebar-hidden",initialHidden);
   const setSidebarHidden=(next:boolean)=>{setHidden(next);document.body.classList.toggle("m118-sidebar-hidden",next);if(!mobile)localStorage.setItem("m118-sidebar-hidden",next?"1":"0")};
   const toggle=()=>setHidden(current=>{const next=!current;document.body.classList.toggle("m118-sidebar-hidden",next);if(!mobile)localStorage.setItem("m118-sidebar-hidden",next?"1":"0");return next});
-  const closeAfterNav=(event:MouseEvent)=>{if(!mobile)return;const target=event.target as HTMLElement|null,control=target?.closest("nav a, nav button") as HTMLElement|null;if(!control)return;setSidebarHidden(true)};
+  const closeAfterNav=(event:MouseEvent)=>{if(!mobile)return;const target=event.target as HTMLElement|null,control=target?.closest("nav a, nav button") as HTMLElement|null;if(!control||control.querySelector("span.flex-1"))return;setSidebarHidden(true)};
   window.addEventListener("m118-sidebar-toggle",toggle);
   document.addEventListener("click",closeAfterNav,true);
   const apply=()=>{
