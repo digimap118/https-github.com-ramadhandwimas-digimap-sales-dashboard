@@ -5,6 +5,7 @@ import M118ContentParity from "@/components/m118-content-parity"
 import M118SettingsParity from "@/components/m118-settings-parity"
 import M118SohParity from "@/components/m118-soh-parity"
 import M118ReferenceViews from "@/components/m118-reference-views"
+import M118LiveFocusViews from "@/components/m118-live-focus-views"
 
 export default function Home() {
   return <>
@@ -15,5 +16,6 @@ export default function Home() {
     <M118SettingsParity />
     <M118SohParity />
     <M118ReferenceViews />
+    <M118LiveFocusViews />
   </>
 }
