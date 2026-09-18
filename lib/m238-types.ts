@@ -21,4 +21,5 @@ export type M238Payload={
   mode:"live"|"demo";generatedAt:string;latestDate:string;period:string;staff:Staff[];target:Target;
   dailyStaff:StaffMetric[];monthlyStaff:StaffMetric[];daily:DailyMetric[];dailySchedule:StaffSchedule[];
   summary:{amount:number;device:number;accessories:number;vas:number;invoices:number;qty:number;upt:number;atv:number;estimate:number;point:number;timegone:number}
-}export type M118Payload = M238Payload
+}
+  export type M118Payload = M238Payload
